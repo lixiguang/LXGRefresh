@@ -12,6 +12,13 @@
 		7422A8A32084C98600208F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7422A8A12084C98600208F65 /* Main.storyboard */; };
 		7422A8A52084C98A00208F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7422A8A42084C98A00208F65 /* Assets.xcassets */; };
 		7422A8A82084C98A00208F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7422A8A62084C98A00208F65 /* LaunchScreen.storyboard */; };
+		7422A8B92084C9BB00208F65 /* LXGRefreshconstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8B12084C9BB00208F65 /* LXGRefreshconstants.swift */; };
+		7422A8BA2084C9BB00208F65 /* LXGRefreshExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8B22084C9BB00208F65 /* LXGRefreshExtension.swift */; };
+		7422A8BB2084C9BB00208F65 /* LXGRefreshCircleloadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8B32084C9BB00208F65 /* LXGRefreshCircleloadingView.swift */; };
+		7422A8BD2084C9BB00208F65 /* LXGRefreshArrowLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8B52084C9BB00208F65 /* LXGRefreshArrowLoadingView.swift */; };
+		7422A8BE2084C9BB00208F65 /* LXGRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8B62084C9BB00208F65 /* LXGRefreshLoadingView.swift */; };
+		7422A8BF2084C9BB00208F65 /* LXGRefreshReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8B72084C9BB00208F65 /* LXGRefreshReminderView.swift */; };
+		7422A8C22084CA5000208F65 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8C12084CA5000208F65 /* NavController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		7422A8A42084C98A00208F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7422A8A72084C98A00208F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7422A8A92084C98A00208F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7422A8B12084C9BB00208F65 /* LXGRefreshconstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXGRefreshconstants.swift; sourceTree = "<group>"; };
+		7422A8B22084C9BB00208F65 /* LXGRefreshExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXGRefreshExtension.swift; sourceTree = "<group>"; };
+		7422A8B32084C9BB00208F65 /* LXGRefreshCircleloadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXGRefreshCircleloadingView.swift; sourceTree = "<group>"; };
+		7422A8B52084C9BB00208F65 /* LXGRefreshArrowLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXGRefreshArrowLoadingView.swift; sourceTree = "<group>"; };
+		7422A8B62084C9BB00208F65 /* LXGRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXGRefreshLoadingView.swift; sourceTree = "<group>"; };
+		7422A8B72084C9BB00208F65 /* LXGRefreshReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXGRefreshReminderView.swift; sourceTree = "<group>"; };
+		7422A8C12084CA5000208F65 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,37 @@
 		7422A89C2084C98600208F65 /* LXGRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				7422A8AF2084C9BB00208F65 /* LXGRefresh */,
 				7422A89D2084C98600208F65 /* AppDelegate.swift */,
 				7422A89F2084C98600208F65 /* ViewController.swift */,
+				7422A8C12084CA5000208F65 /* NavController.swift */,
 				7422A8A12084C98600208F65 /* Main.storyboard */,
+				7422A8C02084CA2900208F65 /* supportingFiles */,
+			);
+			path = LXGRefresh;
+			sourceTree = "<group>";
+		};
+		7422A8AF2084C9BB00208F65 /* LXGRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				7422A8B12084C9BB00208F65 /* LXGRefreshconstants.swift */,
+				7422A8B22084C9BB00208F65 /* LXGRefreshExtension.swift */,
+				7422A8B32084C9BB00208F65 /* LXGRefreshCircleloadingView.swift */,
+				7422A8B52084C9BB00208F65 /* LXGRefreshArrowLoadingView.swift */,
+				7422A8B62084C9BB00208F65 /* LXGRefreshLoadingView.swift */,
+				7422A8B72084C9BB00208F65 /* LXGRefreshReminderView.swift */,
+			);
+			path = LXGRefresh;
+			sourceTree = "<group>";
+		};
+		7422A8C02084CA2900208F65 /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				7422A8A42084C98A00208F65 /* Assets.xcassets */,
 				7422A8A62084C98A00208F65 /* LaunchScreen.storyboard */,
 				7422A8A92084C98A00208F65 /* Info.plist */,
 			);
-			path = LXGRefresh;
+			path = supportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7422A8BA2084C9BB00208F65 /* LXGRefreshExtension.swift in Sources */,
+				7422A8BD2084C9BB00208F65 /* LXGRefreshArrowLoadingView.swift in Sources */,
+				7422A8BE2084C9BB00208F65 /* LXGRefreshLoadingView.swift in Sources */,
 				7422A8A02084C98600208F65 /* ViewController.swift in Sources */,
 				7422A89E2084C98600208F65 /* AppDelegate.swift in Sources */,
+				7422A8C22084CA5000208F65 /* NavController.swift in Sources */,
+				7422A8B92084C9BB00208F65 /* LXGRefreshconstants.swift in Sources */,
+				7422A8BF2084C9BB00208F65 /* LXGRefreshReminderView.swift in Sources */,
+				7422A8BB2084C9BB00208F65 /* LXGRefreshCircleloadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +326,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GR4S289HF4;
-				INFOPLIST_FILE = LXGRefresh/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LXGRefresh/supportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +345,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GR4S289HF4;
-				INFOPLIST_FILE = LXGRefresh/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LXGRefresh/supportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
