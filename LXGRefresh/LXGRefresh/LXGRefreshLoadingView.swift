@@ -122,7 +122,6 @@ class LXGRefreshLoadingView: UIView {
         contentInset.top = originalContentInsetTop
         contentInset.bottom = originalContentInsetBottom
         
-        print(contentInset.bottom)
         if currentState == .loading  {
             
             if hasfooter {

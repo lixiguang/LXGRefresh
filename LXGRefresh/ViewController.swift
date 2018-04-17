@@ -71,6 +71,8 @@ class ViewController: UIViewController {
                         appendSource.append(newnum)
                     }
                     
+                   
+                    
                 }
                 if appendSource.count != 0{
                     
