@@ -41,6 +41,8 @@ class LXGRefreshLoadingView: UIView {
             }
         }
     }
+    var reminderLabelView = LXGRefreshLoadingLabel()
+    
     
     var headerActionHandle: (() -> Void)!
     var bottomActionHandle: (() -> Void)!
@@ -59,6 +61,7 @@ class LXGRefreshLoadingView: UIView {
         }
         
         resetScrollViewContentInset(shouldAddObserverWhenFinished: true, completion: { [weak self] () -> () in self?.currentState = .loadingContinue
+            
             
         })
        
@@ -79,6 +82,7 @@ class LXGRefreshLoadingView: UIView {
                 
                 reminderView?.startAnimation()
                 loadingViewAppear()
+               
               
             }
             else if newValue == .animationWillStop {
@@ -106,9 +110,7 @@ class LXGRefreshLoadingView: UIView {
 
                 
             }
-            else if newValue == .stopped{
-                
-            }
+            
         
         }
     }
@@ -288,13 +290,20 @@ class LXGRefreshLoadingView: UIView {
         }else if currentState == .draggingTouching && dragging {
             
            //next version
-            if offsetY >= LXGRrfreshConstants.ArrowChangeHeight {
+            if offsetY >= LXGRrfreshConstants.ArrowChangeHeight || bottomOffset()>LXGRrfreshConstants.ArrowChangeHeight {
                 
                  //Mark arrow up
+                changeLoadingLabelString(label: LXGRrfreshConstants.loadingLabelString.ReleaseToRefresh)
+
                 
+            
             } else {
                 
                 //Mark arrow down
+
+                changeLoadingLabelString(label: LXGRrfreshConstants.loadingLabelString.pullToRefresh)
+              
+                
             }
             
             
@@ -307,9 +316,13 @@ class LXGRefreshLoadingView: UIView {
                     
                     currentState = .loading
                     
+                    changeLoadingLabelString(label: LXGRrfreshConstants.loadingLabelString.Loading)
+                    
                 }else{
                     
                     currentState = .stopped
+                    changeLoadingLabelString(label: LXGRrfreshConstants.loadingLabelString.pullToRefresh)
+                    
 
                     
                 }
@@ -320,9 +333,14 @@ class LXGRefreshLoadingView: UIView {
             if offsetY >= LXGRrfreshConstants.ArrowChangeHeight {
 
                 currentState = .loading
+                changeLoadingLabelString(label: LXGRrfreshConstants.loadingLabelString.Loading)
+
+                
             } else {
 
                 currentState = .stopped
+                changeLoadingLabelString(label: LXGRrfreshConstants.loadingLabelString.pullToRefresh)
+
             }
             }
             
@@ -333,7 +351,7 @@ class LXGRefreshLoadingView: UIView {
     
     fileprivate func actualContentOffsetY() -> CGFloat {
         guard let scrollView = scrollView() else { return 0.0 }
-        return max(-scrollView.contentInset.top - scrollView.contentOffset.y, 0)
+        return max(-scrollView.contentOffset.y, 0)
     }
     
     fileprivate func layoutLoadingView() {
@@ -347,7 +365,19 @@ class LXGRefreshLoadingView: UIView {
         
         let originY: CGFloat = max(min((height - loadingViewSize) / 2.0, minOriginY), 0.0)
         
-        reminderView?.frame = CGRect(x: (width - loadingViewSize) / 2.0, y: originY, width: loadingViewSize, height: loadingViewSize)
+        let labelsize = reminderLabelView.getLabelWidth(str: reminderLabelView.labelString, font: LXGRrfreshConstants.labelfont, height: loadingViewSize)
+        
+        let intervalSize :CGFloat = LXGRrfreshConstants.LoadingContentInterval
+        
+        reminderView?.frame = CGRect(x: (width - labelsize - intervalSize - loadingViewSize) / 2.0, y: originY, width: loadingViewSize, height: loadingViewSize)
+        
+        let labeloriginX : CGFloat = (reminderView?.frame.origin.x)! + (reminderView?.frame.size.width)! + intervalSize
+        
+        reminderLabelView.frame = CGRect(x: labeloriginX, y: originY, width: labelsize, height: loadingViewSize)
+        
+        self.addSubview(reminderLabelView)
+        
+        
 
 
        
@@ -390,6 +420,10 @@ class LXGRefreshLoadingView: UIView {
             return true
         }
         return false
+    }
+    fileprivate func changeLoadingLabelString(label:String){
+        
+        reminderLabelView.labelString = label
     }
     
     fileprivate func currentHeight() -> CGFloat {

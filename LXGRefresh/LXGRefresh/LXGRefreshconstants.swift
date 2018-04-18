@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreGraphics
+import UIKit
 
 public struct LXGRrfreshConstants {
     
@@ -22,11 +23,24 @@ public struct LXGRrfreshConstants {
         static let Arrow = "arrow"
   
     }
+    struct loadingLabelString {
+        static let pullToRefresh =    " pull refresh "
+        static let ReleaseToRefresh = "Release update"
+        static let Loading =          "  loading.... "
+
+    }
+    
+    
+    public static var labelfont: UIFont = UIFont.systemFont(ofSize: 17)
+    public static var loadingColor: UIColor = UIColor(red: 189/255.0, green: 189/255.0, blue: 189/255.0, alpha: 1)
+
     public static var ArrowChangeHeight: CGFloat = 95.0
     public static var bottomAllowLoadingHeight: CGFloat = 50.0
 
     public static var LoadingContentInset: CGFloat = 50.0
-    public static var LoadingViewSize: CGFloat = 30.0
+    public static var LoadingContentInterval: CGFloat = 10.0
+
+    public static var LoadingViewSize: CGFloat = 25.0
     public static var bottomLoadingContentInset: CGFloat = 50.0
 
 }

@@ -38,7 +38,7 @@ class LXGRefreshCircleloadingView: LXGRefreshReminderView {
         super.init(frame: .zero)
         shapeLayer.lineWidth = 1.0
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = UIColor(red: 189/255.0, green: 189/255.0, blue: 189/255.0, alpha: 1).cgColor
+        shapeLayer.strokeColor = LXGRrfreshConstants.loadingColor.cgColor
         shapeLayer.strokeEnd = 0.9
         shapeLayer.actions = ["strokeEnd" : NSNull(), "transform" : NSNull()]
         shapeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74140BC120873B6B0091B938 /* LXGRefreshLoadingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74140BC020873B6B0091B938 /* LXGRefreshLoadingLabel.swift */; };
 		7422A89E2084C98600208F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A89D2084C98600208F65 /* AppDelegate.swift */; };
 		7422A8A02084C98600208F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A89F2084C98600208F65 /* ViewController.swift */; };
 		7422A8A32084C98600208F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7422A8A12084C98600208F65 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74140BC020873B6B0091B938 /* LXGRefreshLoadingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXGRefreshLoadingLabel.swift; sourceTree = "<group>"; };
 		7422A89A2084C98600208F65 /* LXGRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LXGRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7422A89D2084C98600208F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7422A89F2084C98600208F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				7422A8B52084C9BB00208F65 /* LXGRefreshArrowLoadingView.swift */,
 				7422A8B62084C9BB00208F65 /* LXGRefreshLoadingView.swift */,
 				7422A8B72084C9BB00208F65 /* LXGRefreshReminderView.swift */,
+				74140BC020873B6B0091B938 /* LXGRefreshLoadingLabel.swift */,
 			);
 			path = LXGRefresh;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				7422A8BA2084C9BB00208F65 /* LXGRefreshExtension.swift in Sources */,
 				7422A8BD2084C9BB00208F65 /* LXGRefreshArrowLoadingView.swift in Sources */,
 				7422A8BE2084C9BB00208F65 /* LXGRefreshLoadingView.swift in Sources */,
+				74140BC120873B6B0091B938 /* LXGRefreshLoadingLabel.swift in Sources */,
 				7422A8A02084C98600208F65 /* ViewController.swift in Sources */,
 				7422A89E2084C98600208F65 /* AppDelegate.swift in Sources */,
 				7422A8C22084CA5000208F65 /* NavController.swift in Sources */,

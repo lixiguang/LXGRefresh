@@ -104,13 +104,13 @@ class LXGRefreshArrowLoadingView: LXGRefreshReminderView {
         parLayer.instanceTransform = CATransform3DMakeRotation(CGFloat.pi, 0, 0, 1)
         
         layerArcone.fillColor = UIColor.clear.cgColor
-        layerArcone.strokeColor = UIColor(red: 189/255.0, green: 189/255.0, blue: 189/255.0, alpha: 1).cgColor
+        layerArcone.strokeColor = LXGRrfreshConstants.loadingColor.cgColor
         layerArcone.lineWidth = 1.0
         layerArcone.contentsScale = UIScreen.main.scale
         layerArcone.lineCap = kCALineCapRound
         
         layerArrow.fillColor = UIColor.clear.cgColor
-        layerArrow.strokeColor = UIColor(red: 189/255.0, green: 189/255.0, blue: 189/255.0, alpha: 1).cgColor
+        layerArrow.strokeColor = LXGRrfreshConstants.loadingColor.cgColor
         layerArrow.lineWidth = 1.0
         layerArrow.contentsScale = UIScreen.main.scale
         layerArrow.lineCap = kCALineCapRound
