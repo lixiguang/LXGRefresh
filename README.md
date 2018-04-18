@@ -1,8 +1,7 @@
 # LXGRefresh
 Elastic pull to refresh compontent developed in Swift
 
-![Image text]
-（https://github.com/lixiguang/LXGRefresh/blob/master/myImage.gif）
+![Image](https://raw.githubusercontent.com/lixiguang/LXGRefresh/master/myImage.gif)
 
 # Requirements
  * Xcode 7 or higher
