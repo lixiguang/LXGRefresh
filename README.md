@@ -10,9 +10,9 @@ Elastic pull to refresh compontent developed in Swift
  Open and run the LXGRefreshExample project in Xcode to see LXGRefresh in action.
 # Installation
 # cocoapod
-      platform :ios, '9.0'
-      <br>target 'test' do\<br>
-      <br>pod 'LXGRefresh'\<br> 
+      platform :ios, '9.0'<br>
+      target 'test' do<br>
+      pod 'LXGRefresh' 
 
       end
   ## than
