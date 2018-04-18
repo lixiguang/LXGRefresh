@@ -11,11 +11,11 @@ Elastic pull to refresh compontent developed in Swift
 # Installation
 # cocoapod
       platform :ios, '9.0'
-      target 'test' do
-      pod 'LXGRefresh'
+      target 'test' do <br>
+      pod 'LXGRefresh' \<br> 
 
       end
-## than
+  ## than
       pod install
 
 # Example usage
