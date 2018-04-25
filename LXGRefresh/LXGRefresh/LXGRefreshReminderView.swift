@@ -18,6 +18,7 @@ class LXGRefreshReminderView: UIView {
     public override init(frame: CGRect) {
         
         super.init(frame: .zero)
+        self.alpha = 0
         
     }
     
@@ -36,12 +37,20 @@ class LXGRefreshReminderView: UIView {
         
         
     }
-    open func startAnimation() {
+    open func startAnimation(ArrowView: LXGRefreshLoadingArrowView) {
+        
+        self.alpha = 1
+        ArrowView.alpha = 0
+        
         
         
     }
-    open func stopAnimation() {
+    open func stopAnimation(ArrowView: LXGRefreshLoadingArrowView) {
         
+        self.alpha = 0
+        ArrowView.alpha = 1
+
+
         
         
     }

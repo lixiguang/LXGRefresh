@@ -31,6 +31,7 @@ class LXGRefreshLoadingView: UIView {
     var hasfooter : Bool!
 
     
+    fileprivate var loadingArrowView = LXGRefreshLoadingArrowView()
     
     
     var reminderView: LXGRefreshReminderView? {
@@ -80,14 +81,14 @@ class LXGRefreshLoadingView: UIView {
             if previousState == .draggingTouching ,newValue == .loading {
                 
                 
-                reminderView?.startAnimation()
+                reminderView?.startAnimation(ArrowView: loadingArrowView)
                 loadingViewAppear()
                
               
             }
             else if newValue == .animationWillStop {
 
-                reminderView?.stopAnimation()
+                reminderView?.stopAnimation(ArrowView: loadingArrowView)
                 
                 resetScrollViewContentInset(shouldAddObserverWhenFinished: true, completion: { [weak self] () -> () in
                     self?.currentState = .stopped
@@ -293,6 +294,9 @@ class LXGRefreshLoadingView: UIView {
             if offsetY >= LXGRrfreshConstants.ArrowChangeHeight || bottomOffset()>LXGRrfreshConstants.ArrowChangeHeight {
                 
                  //Mark arrow up
+
+                loadingArrowView.stopAnimation()
+
                 changeLoadingLabelString(label: LXGRrfreshConstants.loadingLabelString.ReleaseToRefresh)
 
                 
@@ -300,6 +304,8 @@ class LXGRefreshLoadingView: UIView {
             } else {
                 
                 //Mark arrow down
+                loadingArrowView.starAnimation()
+
 
                 changeLoadingLabelString(label: LXGRrfreshConstants.loadingLabelString.pullToRefresh)
               
@@ -371,11 +377,14 @@ class LXGRefreshLoadingView: UIView {
         
         reminderView?.frame = CGRect(x: (width - labelsize - intervalSize - loadingViewSize) / 2.0, y: originY, width: loadingViewSize, height: loadingViewSize)
         
+        loadingArrowView.frame = CGRect(x: (width - labelsize - intervalSize - loadingViewSize) / 2.0, y: originY, width: loadingViewSize, height: loadingViewSize)
+        
         let labeloriginX : CGFloat = (reminderView?.frame.origin.x)! + (reminderView?.frame.size.width)! + intervalSize
         
         reminderLabelView.frame = CGRect(x: labeloriginX, y: originY, width: labelsize, height: loadingViewSize)
         
         self.addSubview(reminderLabelView)
+        self.addSubview(loadingArrowView)
         
         
 

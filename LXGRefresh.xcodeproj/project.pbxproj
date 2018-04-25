@@ -20,6 +20,7 @@
 		7422A8BE2084C9BB00208F65 /* LXGRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8B62084C9BB00208F65 /* LXGRefreshLoadingView.swift */; };
 		7422A8BF2084C9BB00208F65 /* LXGRefreshReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8B72084C9BB00208F65 /* LXGRefreshReminderView.swift */; };
 		7422A8C22084CA5000208F65 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7422A8C12084CA5000208F65 /* NavController.swift */; };
+		74285B2E2090A9C90045F9F9 /* LXGRefreshLoadingArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74285B2D2090A9C90045F9F9 /* LXGRefreshLoadingArrowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7422A8B62084C9BB00208F65 /* LXGRefreshLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXGRefreshLoadingView.swift; sourceTree = "<group>"; };
 		7422A8B72084C9BB00208F65 /* LXGRefreshReminderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXGRefreshReminderView.swift; sourceTree = "<group>"; };
 		7422A8C12084CA5000208F65 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		74285B2D2090A9C90045F9F9 /* LXGRefreshLoadingArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXGRefreshLoadingArrowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				7422A8B62084C9BB00208F65 /* LXGRefreshLoadingView.swift */,
 				7422A8B72084C9BB00208F65 /* LXGRefreshReminderView.swift */,
 				74140BC020873B6B0091B938 /* LXGRefreshLoadingLabel.swift */,
+				74285B2D2090A9C90045F9F9 /* LXGRefreshLoadingArrowView.swift */,
 			);
 			path = LXGRefresh;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7422A8BA2084C9BB00208F65 /* LXGRefreshExtension.swift in Sources */,
+				74285B2E2090A9C90045F9F9 /* LXGRefreshLoadingArrowView.swift in Sources */,
 				7422A8BD2084C9BB00208F65 /* LXGRefreshArrowLoadingView.swift in Sources */,
 				7422A8BE2084C9BB00208F65 /* LXGRefreshLoadingView.swift in Sources */,
 				74140BC120873B6B0091B938 /* LXGRefreshLoadingLabel.swift in Sources */,

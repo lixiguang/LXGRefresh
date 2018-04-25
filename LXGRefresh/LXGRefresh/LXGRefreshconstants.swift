@@ -24,14 +24,14 @@ public struct LXGRrfreshConstants {
   
     }
     struct loadingLabelString {
-        static let pullToRefresh =    " pull refresh "
-        static let ReleaseToRefresh = "Release update"
-        static let Loading =          "  loading.... "
+        static let pullToRefresh =    " 下拉刷新 " //" pull refresh "
+        static let ReleaseToRefresh = " 松开更新 " //"Release update"
+        static let Loading =          " 加载中..." //"  loading.... "
 
     }
     
     
-    public static var labelfont: UIFont = UIFont.systemFont(ofSize: 17)
+    public static var labelfont: UIFont = UIFont.systemFont(ofSize: 16)
     public static var loadingColor: UIColor = UIColor(red: 189/255.0, green: 189/255.0, blue: 189/255.0, alpha: 1)
 
     public static var ArrowChangeHeight: CGFloat = 95.0

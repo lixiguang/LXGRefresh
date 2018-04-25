@@ -55,18 +55,18 @@ class LXGRefreshArrowLoadingView: LXGRefreshReminderView {
         
         
     }
-    override func stopAnimation() {
+    override func stopAnimation(ArrowView: LXGRefreshLoadingArrowView) {
         
-        super.stopAnimation()
+        super.stopAnimation(ArrowView: ArrowView)
         parLayer.removeAnimation(forKey: animationKeyword)
         layerArrow.removeAnimation(forKey: changeanimationKeyword)
 
         
     }
     
-    override func startAnimation() {
+    override func startAnimation(ArrowView: LXGRefreshLoadingArrowView) {
         
-       super.startAnimation()
+       super.startAnimation(ArrowView: ArrowView)
         
      if parLayer.animation(forKey: animationKeyword) != nil,layerArcone.animation(forKey: changeanimationKeyword) != nil {
             return

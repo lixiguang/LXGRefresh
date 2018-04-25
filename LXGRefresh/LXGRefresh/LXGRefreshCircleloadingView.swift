@@ -62,9 +62,9 @@ class LXGRefreshCircleloadingView: LXGRefreshReminderView {
         }
         
     }
-    override func startAnimation() {
+    override func startAnimation(ArrowView: LXGRefreshLoadingArrowView) {
         
-        super.startAnimation()
+        super.startAnimation(ArrowView: ArrowView)
     
         if shapeLayer.animation(forKey: animationKeyword) != nil {
             return
@@ -82,8 +82,8 @@ class LXGRefreshCircleloadingView: LXGRefreshReminderView {
     fileprivate func currentDegree() -> CGFloat {
         return shapeLayer.value(forKeyPath: "transform.rotation.z") as! CGFloat
     }
-     override func stopAnimation() {
-        super.stopAnimation()
+     override func stopAnimation(ArrowView: LXGRefreshLoadingArrowView) {
+        super.stopAnimation(ArrowView: ArrowView)
         shapeLayer.removeAnimation(forKey: animationKeyword)
     }
     
